@@ -1,5 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ak sv – red team & ai security</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* full-screen Call of Duty wallpaper */
+    body {
+      background: url('/assets/img/cod-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      font-family: "Courier New", monospace;
+    }
+    /* dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* ensure content is above overlay */
+    header, section, footer {
+      position: relative;
+      z-index: 1;
+    }
+    /* neon styling */
+    .neon {
+      text-shadow:
+        0 0 8px #00ffff,
+        0 0 12px #00ffff;
+    }
+    .btn-neon {
+      @apply px-4 py-2 border border-cyan-400 rounded hover:shadow-lg transition-shadow;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Hero -->
+  <header class="flex-1 flex flex-col justify-center items-center text-center p-8">
+    <h1 class="text-5xl neon font-mono" data-aos="fade-down">ak sv</h1>
+    <p class="mt-4 text-xl" data-aos="fade-up" data-aos-delay="200">
+      red teamer • security researcher • adrenaline junkie
+    </p>
+    <a href="#projects" class="btn-neon mt-6 neon" data-aos="zoom-in" data-aos-delay="400">
+      view projects
+    </a>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects" class="p-8 bg-gray-900 bg-opacity-60">
+    <h2 class="text-3xl neon font-mono mb-6" data-aos="fade-right">projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl" data-aos="flip-left">
+        <h3 class="text-2xl neon font-semibold mb-2">powershell toolkit</h3>
+        <p>Custom red-team modules: enumeration, credential theft, stealth exfil.</p>
+        <a href="https://github.com/G407RIPP3ER/ps-tools" class="text-cyan-300 inline-block mt-2 hover:underline">
+          view repo →
+        </a>
+      </div>
+      <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl" data-aos="flip-right" data-aos-delay="100">
+        <h3 class="text-2xl neon font-semibold mb-2">ai-driven c2</h3>
+        <p>GPT-powered command-and-control framework proof-of-concept.</p>
+        <a href="https://github.com/G407RIPP3ER/ai-c2" class="text-cyan-300 inline-block mt-2 hover:underline">
+          view repo →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- About Me -->
-  <section id="about" class="p-8 bg-gray-800">
+  <section id="about" class="p-8 bg-gray-800 bg-opacity-70">
     <h2 class="text-3xl neon font-mono mb-6" data-aos="fade-right">about me</h2>
     <div class="prose prose-invert max-w-none" data-aos="fade-up" data-aos-delay="100">
       <p>
@@ -13,62 +93,77 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="p-8 bg-gray-900">
+  <section id="skills" class="p-8 bg-gray-900 bg-opacity-60">
     <h2 class="text-3xl neon font-mono mb-6" data-aos="fade-left">skills</h2>
     <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 list-none" data-aos="zoom-in" data-aos-delay="200">
-      <li class="bg-gray-800 p-4 rounded text-center neon">powershell</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">linux kernel exploits</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">c/c++ reverse-engineering</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">ai/deepfake demos</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">jupyter/fastapi dev</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">memsec & forensics</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">ctf challenge design</li>
-      <li class="bg-gray-800 p-4 rounded text-center neon">social eng & phishing</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">powershell</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">linux exploits</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">reverse-engineering</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">deepfake demos</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">fastapi dev</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">memsec & forensics</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">ctf design</li>
+      <li class="bg-gray-800 bg-opacity-80 p-4 rounded text-center neon">social eng</li>
     </ul>
   </section>
 
   <!-- Hall of Fame -->
-  <section id="hof" class="p-8 bg-gray-800">
+  <section id="hof" class="p-8 bg-gray-800 bg-opacity-70">
     <h2 class="text-3xl neon font-mono mb-6" data-aos="fade-up">hall of fame</h2>
     <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="p-4 bg-gray-700 rounded flex items-center">
+      <div class="p-4 bg-gray-700 bg-opacity-80 rounded flex items-center">
         <span class="font-mono text-cyan-300 flex-shrink-0 w-12">🏆</span>
         <div class="ml-4">
-          <strong>Trailblazer 1st Place</strong> — won top prize among 120+ competitors at UST security comp (Aug 2024)
+          <strong>Trailblazer 1st Place</strong> — won top prize among 120+ competitors at UST (Aug 2024)
         </div>
       </div>
-      <div class="p-4 bg-gray-700 rounded flex items-center">
+      <div class="p-4 bg-gray-700 bg-opacity-80 rounded flex items-center">
         <span class="font-mono text-cyan-300 flex-shrink-0 w-12">🥇</span>
         <div class="ml-4">
-          <strong>Top Bug Bounty Hunter</strong> — reported 15+ critical vulns in 2025 Windows Insider Preview  
+          <strong>Top Bug Bounty Hunter</strong> — reported 15+ critical vulns in Windows Insider Preview (2025)
         </div>
       </div>
-      <!-- add more entries here -->
     </div>
   </section>
 
   <!-- CFP’s -->
-  <section id="cfps" class="p-8 bg-gray-900">
+  <section id="cfps" class="p-8 bg-gray-900 bg-opacity-60">
     <h2 class="text-3xl neon font-mono mb-6" data-aos="fade-right">cfp’s</h2>
     <ul class="list-disc list-inside space-y-2 prose prose-invert" data-aos="fade-left" data-aos-delay="200">
       <li><strong>AI in Action</strong> — “Deepfake Defenses” accepted at SecureCon 2025</li>
       <li><strong>AI Red Teaming</strong> — “Prompt Injection Battle Stories” submitted to Black Hat Asia 2025</li>
-      <!-- more CFP entries -->
     </ul>
   </section>
 
   <!-- Talks -->
-  <section id="talks" class="p-8 bg-gray-800">
+  <section id="talks" class="p-8 bg-gray-800 bg-opacity-70">
     <h2 class="text-3xl neon font-mono mb-6" data-aos="zoom-in">talks</h2>
     <div class="space-y-6" data-aos="zoom-in" data-aos-delay="100">
       <div>
         <h3 class="text-2xl neon font-semibold">AI-Powered Malware Demo</h3>
-        <p class="prose prose-invert">Presented at UST “AI in Action” session, May 2025 — live demo of voice-cloning deepfake to bypass voice auth.</p>
+        <p class="prose prose-invert">
+          Presented at UST “AI in Action” session, May 2025 — live voice-cloning deepfake bypass.
+        </p>
       </div>
       <div>
         <h3 class="text-2xl neon font-semibold">Kernel-Level Flight</h3>
-        <p class="prose prose-invert">Walkthrough of LD_PRELOAD & memory hijacking at LinuxConf AU 2025.</p>
+        <p class="prose prose-invert">
+          Walkthrough of LD_PRELOAD & memory hijacking at LinuxConf AU 2025.
+        </p>
       </div>
-      <!-- more talks -->
     </div>
   </section>
+
+  <!-- Contact -->
+  <footer class="text-center p-6 mt-auto bg-gray-900 bg-opacity-60">
+    <p data-aos="fade-up">📫 &nbsp; ak.sv [at] example.com</p>
+    <p class="mt-2 text-sm text-gray-500" data-aos="fade-up" data-aos-delay="100">
+      © 2025 ak sv
+    </p>
+  </footer>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init({ duration: 800, once: true }); </script>
+</body>
+</html>
