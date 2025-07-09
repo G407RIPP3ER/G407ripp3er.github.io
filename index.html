@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ananda Krishna | Red Team & AI Security</title>
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { margin: 0; padding: 0; list-style: none; }
 
+    /* Layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 20px;
+    }
+    main { flex: 3; }
+    aside { flex: 1; background: #1a1a1a; padding: 20px; border-radius: 8px; }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 30px 0;
+      background: linear-gradient(45deg, #1f1f1f, #121212);
+    }
+    header h1 {
+      color: #a6e22e;
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+    header p {
+      color: #66d9ef;
+      font-size: 1.1rem;
+    }
+
+    /* Nav */
+    nav { margin-bottom: 20px; }
+    nav ul { display: flex; gap: 15px; justify-content: center; }
+    nav li a {
+      color: #66d9ef;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav li a:hover { background: #333; }
+
+    /* Sections */
+    .section-title {
+      font-size: 1.5rem;
+      margin: 20px 0 10px;
+      border-bottom: 2px solid #66d9ef;
+      display: inline-block;
+    }
+    section ul { margin-left: 10px; }
+
+    /* Dashboard Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    }
+    .card h3 { margin: 10px 0; color: #a6e22e; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ananda Krishna</h1>
+    <p>Red Teamer • AI in Action Presenter • CTF Architect</p>
+  </header>
+  <div class="container">
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#writeups">Writeups</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#ctf-contests">CTF Contests</a></li>
+          <li><a href="#memberships">Member Of</a></li>
+        </ul>
+      </nav>
+
+      <section id="dashboard">
+        <div class="card-grid">
+          <a class="card" href="#writeups"><h3>Writeups</h3><p>In-depth research articles</p></a>
+          <a class="card" href="#talks"><h3>Talks</h3><p>Conference sessions</p></a>
+          <a class="card" href="#ctf-contests"><h3>CTF Contests</h3><p>Boot-to-root challenges</p></a>
+          <a class="card" href="#memberships"><h3>Member Of</h3><p>Professional groups</p></a>
+        </div>
+      </section>
+
+      <section id="writeups">
+        <h2 class="section-title">Writeups</h2>
+        <ul>
+          <li><a href="#">EDR Evasion Techniques</a></li>
+          <li><a href="#">ICMP Timestamp Vulnerability</a></li>
+          <li><a href="#">Deepfake Audio/Video PoC</a></li>
+        </ul>
+      </section>
+
+      <section id="talks">
+        <h2 class="section-title">Talks</h2>
+        <ul>
+          <li>GrrCON 2025 — APT-Style Evasion</li>
+          <li>AI in Action @ UST Global (May 2025)</li>
+          <li>Virtual BSides — OSINT Dark Web</li>
+        </ul>
+      </section>
+
+      <section id="ctf-contests">
+        <h2 class="section-title">CTF Contests</h2>
+        <ul>
+          <li>Boot2Root Challenge (GitHub)</li>
+          <li>PwnTech 2024 — Top 10% Finisher</li>
+          <li>HackRedCon CTF — Team Lead</li>
+        </ul>
+      </section>
+
+      <section id="memberships">
+        <h2 class="section-title">Member Of</h2>
+        <ul>
+          <li>OWASP Chapter - Hyderabad</li>
+          <li>IEEE Computer Society</li>
+          <li>Nullcon Speaker's Club</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside>
+      <h2 class="section-title">Bio</h2>
+      <p>Seasoned cybersecurity professional with 10+ years in red teaming, vulnerability research, and AI-driven security. Recognized by NASA Hall of Fame and UST Trailblazer nominee.</p>
+      <ul>
+        <li>Expert in EDR evasion & syscall obfuscation</li>
+        <li>CTF designer & coach</li>
+        <li>AI deepfake & voice cloning developer</li>
+        <li>Published researcher & speaker</li>
+      </ul>
+    </aside>
+  </div>
+</body>
+</html>
